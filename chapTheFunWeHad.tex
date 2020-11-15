@@ -1,0 +1,21 @@
+\chapter{The fun we had}
+\label{chap:TheFunWeHad}
+
+I'm not saying what comes before isn't unhelpful, but if you want some more sensible instructions go and look up Andy's example which is at \href{https://ctan.org/tex-archive/macros/latex/contrib/hepthesis}{https://ctan.org/tex-archive/macros/latex/contrib/hepthesis}.
+I really just wanted to make a very minimal and working version of Andy's example which compiled without having to generate the bibliography using anything fancier than bibtex.
+
+To compile this stuff you can do:
+
+\begin{algorithm}[H]
+\caption{My algorithm for success}\label{euclid}
+\begin{algorithmic}[1]
+\Procedure{MyProcedure}{}
+\State pdflatex thesis.tex
+\State bibtex thesis.aux
+\State pdflatex thesis.tex
+\State pdflatex thesis.tex
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Note, these are commands that work for me on my linux machine using \texttt{pdflatex} and \texttt{bibtex}. I don't care about you. They may not work for you. Also, to use this horible algorithm format I had to add two usepackage statements (\texttt{algorithm}, \texttt{algpseudocode}) to the preamble.tex file. It wasn't worth it..
